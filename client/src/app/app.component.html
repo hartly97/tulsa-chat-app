@@ -8,6 +8,6 @@
 		</div>
 	</div>
 
-	<input class="form-control" [(ngModel)]="inputText">
+	<input class="form-control" [(ngModel)]="inputText" (keydown.enter) ="sendInput()">
 
 </div>
