@@ -7,9 +7,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, err => console.log('Chat server listening on %d', PORT))
+app.use(express.static('../client/dist/client'));
 
 const messages = [
   {date:new Date(), text:'server started', from:'Michelle'}
