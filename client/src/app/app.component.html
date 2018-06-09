@@ -8,6 +8,13 @@
 		</div>
 	</div>
 
-	<input class="form-control" [(ngModel)]="inputText" (keydown.enter) ="sendInput()">
+	<div class="row">
+		<div class="col-2">
+			<input class="form-control" [(ngModel)]="inputName" placeholder="Your Name">
+		</div>
 
+		<div class="col-10">
+			<input class="form-control" [(ngModel)]="inputText" (keydown.enter) ="sendInput()"[disabled]="!inputName">
+		</div>
+	</div>
 </div>
